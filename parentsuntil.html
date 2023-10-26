@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid blue;
+            color: blue;
+            padding: 5px;
+        }
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+    
+<div class="ancestors">body (great great grandparent)
+    <div style = "width:500px;"> (div) great grandparent
+        <ul id="ull">(ul) grandparent
+            <li>
+                (li)directparent
+                <span>child</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function()
+        {
+            $("span").parentsUntil("ul").css({'color':'red','border':'2px solid red'});
+        });
+    </script>
+
+    
+</body>
+</html>

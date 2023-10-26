@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="query.js"></script>
+    
+</head>
+<body>
+    <h3>this is about hidding paragraph content</h3>
+    <p>if you click the below button the paratext will be hidden</p>
+    <p id="test">click me to hide</p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <h4>double click me to change the text color</h4>
+    <h4>click me too</h4>
+    <p>list1</p>
+    <ul>
+        <li>sid</li>
+        <li>awes</li>
+        <li>arun</li>
+    </ul>
+    <p>list2</p>
+    <ul>
+        <li>sid</li>
+        <li>awes</li>
+        <li>arun</li>
+    </ul>
+    <button>click me</button>
+
+    <table border="1">
+        <tr>
+            <th>name</th>
+            <th>country</th>
+        </tr>
+        <tr>
+            <td>sid</td>
+            <td>india</td>
+        </tr>
+        <tr>
+            <td>albert</td>
+            <td>england</td>
+        </tr>
+        <tr>
+            <td>ercel</td>
+            <td>turkey</td>
+        </tr>
+    </table>
+
+    <p id="one">move mouse on me</p>
+    <br><br>
+
+    name: <input type="text" name="fullname"><br>
+    email:<input type="text" name="email">
+
+    <!-- using multiple handlers for single p tag -->
+    <p id="mulhandle">if you move mouse pointer color changes and if u click u get different color</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $('p').hide(5000);
+                // $("ul li:first-child").hide();//$("ul li:first-child")	Selects the first <li> element of every <ul>
+                //we use * to hide all elements and, . for class name # for id's,$(this) this selects the 
+                //current html element,$("p:first") Selects all <p> elements with class="intro"
+            });
+            $('#show').click(function(){
+            $('p').show(2000);
+            });
+        });
+        $(document).ready(function(){
+            $("tr:even").css("background-color","blue")
+        })
+    </script>
+
+</body>
+</html>
